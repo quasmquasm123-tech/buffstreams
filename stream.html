@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream - SportStreams</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #0b132b, #000);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .stream-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Ad Spaces */
+        .ad-top,
+        .ad-bottom {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .ad-top:hover,
+        .ad-bottom:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Stream Player Layout with Side Ads */
+        .player-area {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 15px;
+        }
+
+        .side-ad {
+            width: 160px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #bbb;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .side-ad:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stream-player {
+            flex: 1;
+            height: 600px;
+            border-radius: 15px;
+            background: #000;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            overflow: hidden;
+            transition: box-shadow 0.4s ease;
+        }
+
+        .stream-player:hover {
+            box-shadow: 0 0 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* Stream Info */
+        .stream-info {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 1.8rem;
+            border-radius: 12px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .stream-info:hover {
+            transform: translateY(-5px);
+        }
+
+        .stream-info h2 {
+            color: #ff6b35;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .stream-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 0.9rem;
+            color: #b0b7c8;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .status-live {
+            color: #00ff00;
+        }
+
+        .status-upcoming {
+            color: #ffa726;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-top: 2rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff8e62;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .player-area {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .side-ad {
+                width: 100%;
+            }
+
+            .stream-player {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stream-player {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stream-container">
+        <div class="header">
+            <h1 id="page-title">Live Stream</h1>
+        </div>
+
+        <div class="ad-top">🔸 Advertisement Space (Top Banner 728x90) 🔸</div>
+
+        <div class="player-area">
+            <div class="side-ad">Ad Space<br>(160x600)</div>
+
+            <div class="stream-player" id="stream-iframe">
+                <div
+                    style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#000;color:white;">
+                    <div style="text-align:center;">
+                        <h3>Loading Stream...</h3>
+                        <p>Please wait while we load the live stream</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-ad">Ad Space<br>(160x600)</div>
+        </div>
+
+        <div class="ad-bottom">🔸 Advertisement Space (Bottom Banner 728x90) 🔸</div>
+
+        <div class="stream-info">
+            <h2 id="event-title">Event Information</h2>
+            <div class="stream-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Time</div>
+                    <div class="meta-value" id="event-time">Loading...</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">League</div>
+                    <div class="meta-value" id="event-league">Loading...</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Status</div>
+                    <div class="meta-value" id="event-status">Loading...</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Channel</div>
+                    <div class="meta-value" id="event-channel">Loading...</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Quality</div>
+                    <div class="meta-value" id="event-quality">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Events</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventData = {
+            title: decodeURIComponent(urlParams.get('title') || 'Live Sports Event'),
+            channelName: decodeURIComponent(urlParams.get('channelName') || ''),
+            embedUrl: decodeURIComponent(urlParams.get('embedUrl') || ''),
+            time: decodeURIComponent(urlParams.get('time') || 'Time TBD ET'),
+            league: decodeURIComponent(urlParams.get('league') || 'Sports'),
+            status: decodeURIComponent(urlParams.get('status') || 'upcoming'),
+            quality: decodeURIComponent(urlParams.get('quality') || 'HD')
+        };
+
+        document.getElementById('page-title').textContent = eventData.title;
+        document.getElementById('event-title').textContent = eventData.title;
+        document.getElementById('event-time').textContent = eventData.time;
+        document.getElementById('event-league').textContent = eventData.league;
+        document.getElementById('event-channel').textContent = eventData.channelName;
+        document.getElementById('event-quality').textContent = eventData.quality;
+
+        const statusElement = document.getElementById('event-status');
+        statusElement.textContent = eventData.status.toUpperCase();
+        statusElement.className = `meta-value status-${eventData.status}`;
+
+        function loadStream() {
+            const streamContainer = document.getElementById('stream-iframe');
+
+            if (eventData.embedUrl && eventData.embedUrl !== '') {
+                const iframe = document.createElement('iframe');
+                iframe.src = eventData.embedUrl;
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.frameBorder = '0';
+                iframe.allowFullscreen = true;
+                iframe.style.border = 'none';
+                iframe.allow = 'encrypted-media; autoplay; fullscreen';
+                streamContainer.innerHTML = '';
+                streamContainer.appendChild(iframe);
+            } else {
+                streamContainer.innerHTML = `
+          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:white;flex-direction:column;">
+            <h3>Stream Not Available</h3>
+            <p>Selected channel is currently offline</p>
+            <p style="margin-top:20px;color:#ff6b35;">Please try another channel</p>
+            <a href="index.html" style="margin-top:15px;padding:10px 20px;background:#ff6b35;color:white;text-decoration:none;border-radius:5px;">
+              Back to Events
+            </a>
+          </div>
+        `;
+            }
+        }
+
+        window.addEventListener('load', loadStream);
+    </script>
+</body>
+
+</html>
