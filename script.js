@@ -21,53 +21,7 @@ let allEvents = [];
 // MANUAL EVENTS DATA
 const MANUAL_EVENTS = {
     nfl: [
-        {
-            id: 'nfl_1',
-            title: "Kansas City Chiefs vs Buffalo Bills",
-            time: "8:20 PM",
-            league: "NFL",
-            status: "live",
-            date: new Date(),
-            isLive: true,
-            isUpcoming: false,
-            homeTeam: {
-                name: "Buffalo Bills",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
-                score: "24"
-            },
-            awayTeam: {
-                name: "Kansas City Chiefs",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-                score: "21"
-            },
-            channels: [
-                { name: "NFL Network", embedUrl: "https://topembed.pw/channel/nfl", quality: "HD" },
-                { name: "CBS Sportas", embedUrl: "https://topembed.pw/channel/cbs", quality: "720p" }
-            ]
-        },
-        {
-            id: 'nfl_2',
-            title: "Dallas Cowboys vs Philadelphia Eagles",
-            time: "4:25 PM",
-            league: "NFL",
-            status: "upcoming",
-            date: new Date(Date.now() + 2 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Philadelphia Eagles",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "Dallas Cowboys",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
-                score: "0"
-            },
-            channels: [
-                { name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }
-            ]
-        }
+        
     ],
 
     nba: [
