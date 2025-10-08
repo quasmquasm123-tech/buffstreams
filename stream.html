@@ -329,50 +329,79 @@
         <a href="index.html" class="back-btn">← Back to Events</a>
     </div>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const eventData = {
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const streamId = urlParams.get('id'); // new: read localStorage key id
+
+    let eventData = null;
+
+    // ✅ Try to load from localStorage first
+    if (streamId && localStorage.getItem(streamId)) {
+        try {
+            eventData = JSON.parse(localStorage.getItem(streamId));
+            console.log("✅ Loaded stream data from localStorage:", eventData);
+        } catch (err) {
+            console.error("❌ Failed to parse stream data:", err);
+        }
+    }
+
+    // ✅ Fallback: if no localStorage data, use URL params
+    if (!eventData) {
+        eventData = {
             title: decodeURIComponent(urlParams.get('title') || 'Live Sports Event'),
-            channelName: decodeURIComponent(urlParams.get('channelName') || 'TopEmbed'),
+            channelName: decodeURIComponent(urlParams.get('channelName') || ''),
             embedUrl: decodeURIComponent(urlParams.get('embedUrl') || ''),
-            time: decodeURIComponent(urlParams.get('time') || 'TBD'),
-            league: decodeURIComponent(urlParams.get('league') || 'NFL'),
+            time: decodeURIComponent(urlParams.get('time') || 'Time TBD ET'),
+            league: decodeURIComponent(urlParams.get('league') || 'Sports'),
             status: decodeURIComponent(urlParams.get('status') || 'upcoming'),
             quality: decodeURIComponent(urlParams.get('quality') || 'HD')
         };
+        console.log("⚠️ Fallback to URL parameters:", eventData);
+    }
 
-        document.getElementById('page-title').textContent = eventData.title;
-        document.getElementById('event-title').textContent = eventData.title;
-        document.getElementById('event-time').textContent = eventData.time;
-        document.getElementById('event-league').textContent = eventData.league;
-        document.getElementById('event-channel').textContent = eventData.channelName;
-        document.getElementById('event-quality').textContent = eventData.quality;
-        const statusElement = document.getElementById('event-status');
-        statusElement.textContent = eventData.status.toUpperCase();
-        statusElement.className = `meta-value status-${eventData.status}`;
+    // ✅ Update page content
+    document.getElementById('page-title').textContent = eventData.title;
+    document.getElementById('event-title').textContent = eventData.title;
+    document.getElementById('event-time').textContent = eventData.time;
+    document.getElementById('event-league').textContent = eventData.league;
+    document.getElementById('event-channel').textContent = eventData.channelName;
+    document.getElementById('event-quality').textContent = eventData.quality;
 
-        function loadStream() {
-            const streamContainer = document.getElementById('stream-iframe');
-            if (eventData.embedUrl && eventData.embedUrl !== '') {
-                const iframe = document.createElement('iframe');
-                iframe.src = eventData.embedUrl;
-                iframe.allowFullscreen = true;
-                iframe.allow = "autoplay; fullscreen; encrypted-media";
-                iframe.frameBorder = "0";
-                streamContainer.innerHTML = '';
-                streamContainer.appendChild(iframe);
-            } else {
-                streamContainer.innerHTML = `
-          <div style="display:flex;align-items:center;justify-content:center;flex-direction:column;height:100%;background:#111;color:#fff;">
-            <h3>Stream Not Available</h3>
-            <p>This channel is currently offline</p>
-            <a href="index.html" class="back-btn" style="margin-top:15px;">Back to Events</a>
-          </div>`;
-            }
+    const statusElement = document.getElementById('event-status');
+    statusElement.textContent = eventData.status.toUpperCase();
+    statusElement.className = `meta-value status-${eventData.status}`;
+
+    // ✅ Load Stream
+    function loadStream() {
+        const streamContainer = document.getElementById('stream-iframe');
+        if (eventData.embedUrl && eventData.embedUrl !== '') {
+            const iframe = document.createElement('iframe');
+            iframe.src = eventData.embedUrl;
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            iframe.style.border = 'none';
+            iframe.allow = 'encrypted-media; autoplay; fullscreen';
+            streamContainer.innerHTML = '';
+            streamContainer.appendChild(iframe);
+        } else {
+            streamContainer.innerHTML = `
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a1a1a;color:white;flex-direction:column;">
+                    <h3>Stream Not Available</h3>
+                    <p>This channel is currently offline</p>
+                    <p style="margin-top:20px;color:#ff6b35;">Please try another channel</p>
+                    <a href="index.html" style="margin-top:15px;padding:10px 20px;background:#ff6b35;color:white;text-decoration:none;border-radius:5px;">
+                        Back to Events
+                    </a>
+                </div>
+            `;
         }
+    }
 
-        window.addEventListener('load', loadStream);
-    </script>
+    window.addEventListener('load', loadStream);
+</script>
+
 </body>
 
 </html>
