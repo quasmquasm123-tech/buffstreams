@@ -175,28 +175,121 @@ const MANUAL_EVENTS = {
 
     nhl: [
         {
-            id: 'nhl_1',
-            title: "Toronto Maple Leafs vs Montreal Canadiens",
-            time: "7:00 PM",
-            league: "NHL",
-            status: "upcoming",
-            date: new Date(Date.now() + 5 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Montreal Canadiens",
-                logo: "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "Toronto Maple Leafs",
-                logo: "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
-                score: "0"
-            },
-            channels: [
-                { name: "NHL Network", embedUrl: "https://topembed.pw/channel/nhl", quality: "HD" }
-            ]
-        }
+    id: "nba_1",
+    title: "San Antonio Spurs vs Miami Heat",
+    time: "4:30 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T04:30:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Miami Heat",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "San Antonio Spurs",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
+      score: "0"
+    },
+    channels: [
+      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" },
+      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "720p" }
+    ]
+  },
+  {
+    id: "nba_2",
+    title: "Utah Jazz vs Houston Rockets",
+    time: "5:00 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T05:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Houston Rockets",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Utah Jazz",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+      score: "0"
+    },
+    channels: [
+      { name: "TNT", embedUrl: "https://topembed.pw/channel/tnt", quality: "HD" }
+    ]
+  },
+  {
+    id: "nba_3",
+    title: "Boston Celtics vs Memphis Grizzlies",
+    time: "5:00 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T05:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Memphis Grizzlies",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Boston Celtics",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
+      score: "0"
+    },
+    channels: [
+      { name: "ABC", embedUrl: "https://topembed.pw/channel/abc", quality: "HD" }
+    ]
+  },
+  {
+    id: "nba_4",
+    title: "Portland Trail Blazers vs Golden State Warriors",
+    time: "7:00 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Golden State Warriors",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Portland Trail Blazers",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+      score: "0"
+    },
+    channels: [
+      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
+    ]
+  },
+  {
+    id: "nba_5",
+    title: "Toronto Raptors vs Sacramento Kings",
+    time: "7:00 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Sacramento Kings",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Toronto Raptors",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+      score: "0"
+    },
+    channels: [
+      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "HD" }
+    ]
+  }
     ],
 
     cfb: [
