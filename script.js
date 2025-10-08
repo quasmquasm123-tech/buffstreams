@@ -190,29 +190,105 @@ const MANUAL_EVENTS = {
     ],
 
     mlb: [
-        {
-            id: 'mlb_1',
-            title: "New York Yankees vs Boston Red Sox",
-            time: "7:10 PM",
-            league: "MLB",
-            status: "upcoming",
-            date: new Date(Date.now() + 3 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Boston Red Sox",
-                logo: "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "New York Yankees",
-                logo: "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
-                score: "0"
-            },
-            channels: [
-                { name: "MLB Network", embedUrl: "https://topembed.pw/channel/mlb", quality: "HD" }
-            ]
-        }
+         {
+    id: "mlb_1",
+    title: "Seattle Mariners vs Detroit Tigers",
+    time: "12:08 AM ET",
+    league: "MLB",
+    status: "upcoming",
+    date: new Date("2025-10-08T00:08:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Detroit Tigers",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Seattle Mariners",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+      score: "0"
+    },
+    details: "Bryce Miller vs Casey Mize — ALDS Game 4, SEA leads series 2-1",
+    channels: [
+      { name: "MLB Network", embedUrl: "https://topembed.pw/channel/mlb", quality: "HD" },
+      { name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "720p" }
+    ]
+  },
+  {
+    id: "mlb_2",
+    title: "Milwaukee Brewers vs Chicago Cubs",
+    time: "2:08 AM ET",
+    league: "MLB",
+    status: "upcoming",
+    date: new Date("2025-10-08T02:08:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Chicago Cubs",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Milwaukee Brewers",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+      score: "0"
+    },
+    details: "Quinn Priester vs Jameson Taillon — NLDS Game 3, MIL leads series 2-0",
+    channels: [
+      { name: "TBS", embedUrl: "https://topembed.pw/channel/tbs", quality: "HD" }
+    ]
+  },
+  {
+    id: "mlb_3",
+    title: "Toronto Blue Jays vs New York Yankees",
+    time: "4:08 AM ET",
+    league: "MLB",
+    status: "upcoming",
+    date: new Date("2025-10-08T04:08:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "New York Yankees",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Toronto Blue Jays",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+      score: "0"
+    },
+    details: "Louis Varland vs Cam Schlittler — ALDS Game 4, TOR leads series 2-1",
+    channels: [
+      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" },
+      { name: "MLB Network", embedUrl: "https://topembed.pw/channel/mlb", quality: "HD" }
+    ]
+  },
+  {
+    id: "mlb_4",
+    title: "Philadelphia Phillies vs Los Angeles Dodgers",
+    time: "6:08 AM ET",
+    league: "MLB",
+    status: "upcoming",
+    date: new Date("2025-10-08T06:08:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Los Angeles Dodgers",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Philadelphia Phillies",
+      logo: "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+      score: "0"
+    },
+    details: "Aaron Nola vs Yoshinobu Yamamoto — NLDS Game 3, LAD leads series 2-0",
+    channels: [
+      { name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" },
+      { name: "TBS", embedUrl: "https://topembed.pw/channel/tbs", quality: "720p" }
+    ]
+  }
     ],
 
     soccer: [
