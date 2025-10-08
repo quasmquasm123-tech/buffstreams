@@ -174,30 +174,101 @@ const MANUAL_EVENTS = {
     ],
 
     nhl: [
-        {
-            id: 'nhl_1',
-            title: "Toronto Maple Leafs vs Montreal Canadiens",
-            time: "7:00 PM",
-            league: "NHL",
-            status: "upcoming",
-            date: new Date(Date.now() + 5 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Montreal Canadiens",
-                logo: "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "Toronto Maple Leafs",
-                logo: "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
-                score: "0"
-            },
-            channels: [
-                { name: "NHL Network", embedUrl: "https://topembed.pw/channel/nhl", quality: "HD" }
-            ]
-        }
-    ],
+  {
+    id: "nhl_1",
+    title: "Montreal Canadiens vs Toronto Maple Leafs",
+    time: "4:00 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T04:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Toronto Maple Leafs",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Montreal Canadiens",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+      score: "0"
+    },
+    channels: [
+      { name: "SportsnetEast", embedUrl: "https://topembed.pw/channel/SportsnetEast[Canada]", quality: "HD" },
+      { name: "SportsnetOntario", embedUrl: "https://topembed.pw/channel/SportsnetOntario[Canada]", quality: "720p" }
+    ]
+  },
+  {
+    id: "nhl_2",
+    title: "Boston Bruins vs Washington Capitals",
+    time: "4:30 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T04:30:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Washington Capitals",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Boston Bruins",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
+      score: "0"
+    },
+    channels: [
+      { name: "TNT", embedUrl: "https://topembed.pw/channel/tnt", quality: "HD" }
+    ]
+  },
+  {
+    id: "nhl_3",
+    title: "Calgary Flames vs Edmonton Oilers",
+    time: "7:00 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Edmonton Oilers",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Calgary Flames",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/cgy.png",
+      score: "0"
+    },
+    channels: [
+      { name: "Sportsnet", embedUrl: "https://topembed.pw/channel/sportsnet", quality: "HD" }
+    ]
+  },
+  {
+    id: "nhl_4",
+    title: "Los Angeles Kings vs Vegas Golden Knights",
+    time: "7:00 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Vegas Golden Knights",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/vgs.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Los Angeles Kings",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
+      score: "0"
+    },
+    channels: [
+      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
+    ]
+  }
+]
+
 
     cfb: [
         {
