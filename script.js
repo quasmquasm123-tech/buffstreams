@@ -299,8 +299,8 @@ const MANUAL_EVENTS = {
       score: "0"
     },
     channels: [
-      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" },
-      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "720p" }
+      { name: "BallySportsSun", embedUrl: "https://topembed.pw/channel/BallySportsSun[USA]", quality: "HD" },
+      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "720p" }
     ]
   },
   {
