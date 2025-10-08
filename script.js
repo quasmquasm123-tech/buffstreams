@@ -174,47 +174,47 @@ const MANUAL_EVENTS = {
     ],
 
     nhl: [
-        {
-    id: "nba_1",
-    title: "San Antonio Spurs vs Miami Heat",
+          {
+    id: "nhl_1",
+    title: "Montreal Canadiens vs Toronto Maple Leafs",
+    time: "4:00 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T04:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Toronto Maple Leafs",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Montreal Canadiens",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+      score: "0"
+    },
+    channels: [
+      { name: "ESPN+", embedUrl: "https://topembed.pw/channel/espnplus", quality: "HD" },
+      { name: "NHL Network", embedUrl: "https://topembed.pw/channel/nhl", quality: "720p" }
+    ]
+  },
+  {
+    id: "nhl_2",
+    title: "Boston Bruins vs Washington Capitals",
     time: "4:30 AM ET",
-    league: "NBA",
+    league: "NHL",
     status: "upcoming",
     date: new Date("2025-10-08T04:30:00-04:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
-      name: "Miami Heat",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+      name: "Washington Capitals",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png",
       score: "0"
     },
     awayTeam: {
-      name: "San Antonio Spurs",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
-      score: "0"
-    },
-    channels: [
-      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" },
-      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "720p" }
-    ]
-  },
-  {
-    id: "nba_2",
-    title: "Utah Jazz vs Houston Rockets",
-    time: "5:00 AM ET",
-    league: "NBA",
-    status: "upcoming",
-    date: new Date("2025-10-08T05:00:00-04:00"),
-    isLive: false,
-    isUpcoming: true,
-    homeTeam: {
-      name: "Houston Rockets",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
-      score: "0"
-    },
-    awayTeam: {
-      name: "Utah Jazz",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+      name: "Boston Bruins",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
       score: "0"
     },
     channels: [
@@ -222,72 +222,49 @@ const MANUAL_EVENTS = {
     ]
   },
   {
-    id: "nba_3",
-    title: "Boston Celtics vs Memphis Grizzlies",
-    time: "5:00 AM ET",
-    league: "NBA",
-    status: "upcoming",
-    date: new Date("2025-10-08T05:00:00-04:00"),
-    isLive: false,
-    isUpcoming: true,
-    homeTeam: {
-      name: "Memphis Grizzlies",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-      score: "0"
-    },
-    awayTeam: {
-      name: "Boston Celtics",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
-      score: "0"
-    },
-    channels: [
-      { name: "ABC", embedUrl: "https://topembed.pw/channel/abc", quality: "HD" }
-    ]
-  },
-  {
-    id: "nba_4",
-    title: "Portland Trail Blazers vs Golden State Warriors",
+    id: "nhl_3",
+    title: "Calgary Flames vs Edmonton Oilers",
     time: "7:00 AM ET",
-    league: "NBA",
+    league: "NHL",
     status: "upcoming",
     date: new Date("2025-10-08T07:00:00-04:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
-      name: "Golden State Warriors",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+      name: "Edmonton Oilers",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
       score: "0"
     },
     awayTeam: {
-      name: "Portland Trail Blazers",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+      name: "Calgary Flames",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/cgy.png",
+      score: "0"
+    },
+    channels: [
+      { name: "Sportsnet", embedUrl: "https://topembed.pw/channel/sportsnet", quality: "HD" }
+    ]
+  },
+  {
+    id: "nhl_4",
+    title: "Los Angeles Kings vs Vegas Golden Knights",
+    time: "7:00 AM ET",
+    league: "NHL",
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Vegas Golden Knights",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/vgs.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Los Angeles Kings",
+      logo: "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
       score: "0"
     },
     channels: [
       { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
-    ]
-  },
-  {
-    id: "nba_5",
-    title: "Toronto Raptors vs Sacramento Kings",
-    time: "7:00 AM ET",
-    league: "NBA",
-    status: "upcoming",
-    date: new Date("2025-10-08T07:00:00-04:00"),
-    isLive: false,
-    isUpcoming: true,
-    homeTeam: {
-      name: "Sacramento Kings",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
-      score: "0"
-    },
-    awayTeam: {
-      name: "Toronto Raptors",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
-      score: "0"
-    },
-    channels: [
-      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "HD" }
     ]
   }
     ],
