@@ -22,52 +22,260 @@ let allEvents = [];
 const MANUAL_EVENTS = {
     nfl: [
         {
-            id: 'nfl_1',
-            title: "Kansas City Chiefs vs Buffalo Bills",
-            time: "8:20 PM",
-            league: "NFL",
-            status: "live",
-            date: new Date(),
-            isLive: true,
-            isUpcoming: false,
-            homeTeam: {
-                name: "Buffalo Bills",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
-                score: "24"
-            },
-            awayTeam: {
-                name: "Kansas City Chiefs",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-                score: "21"
-            },
-            channels: [
-                { name: "NFL Network", embedUrl: "https://topembed.pw/channel/nfl", quality: "HD" },
-                { name: "CBS Sportas", embedUrl: "https://topembed.pw/channel/cbs", quality: "720p" }
-            ]
-        },
-        {
-            id: 'nfl_2',
-            title: "Dallas Cowboys vs Philadelphia Eagles",
-            time: "4:25 PM",
-            league: "NFL",
-            status: "upcoming",
-            date: new Date(Date.now() + 2 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Philadelphia Eagles",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "Dallas Cowboys",
-                logo: "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
-                score: "0"
-            },
-            channels: [
-                { name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }
-            ]
-        }
+    id: 'nfl_1',
+    title: "Philadelphia Eagles vs New York Jets",
+    time: "5:15 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T05:15:00-04:00"),
+    homeTeam: {
+      name: "New York Jets",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png"
+    },
+    awayTeam: {
+      name: "Philadelphia Eagles",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png"
+    },
+    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }]
+  },
+  {
+    id: 'nfl_2',
+    title: "Denver Broncos vs New York Jets (London Game)",
+    time: "6:30 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T18:30:00-04:00"),
+    homeTeam: {
+      name: "New York Jets",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png"
+    },
+    awayTeam: {
+      name: "Denver Broncos",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/den.png"
+    },
+    channels: [{ name: "NFL Network", embedUrl: "https://topembed.pw/channel/nfl", quality: "HD" }]
+  },
+  {
+    id: 'nfl_3',
+    title: "Arizona Cardinals vs Indianapolis Colts",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Indianapolis Colts",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png"
+    },
+    awayTeam: {
+      name: "Arizona Cardinals",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png"
+    },
+    channels: [{ name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }]
+  },
+  {
+    id: 'nfl_4',
+    title: "Los Angeles Rams vs Miami Dolphins",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Miami Dolphins",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png"
+    },
+    awayTeam: {
+      name: "Los Angeles Rams",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png"
+    },
+    channels: [{ name: "CBS Sports", embedUrl: "https://topembed.pw/channel/cbs", quality: "720p" }]
+  },
+  {
+    id: 'nfl_5',
+    title: "New England Patriots vs New Orleans Saints",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "New Orleans Saints",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/no.png"
+    },
+    awayTeam: {
+      name: "New England Patriots",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
+    },
+    channels: [{ name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }]
+  },
+  {
+    id: 'nfl_6',
+    title: "Cleveland Browns vs Pittsburgh Steelers",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Pittsburgh Steelers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png"
+    },
+    awayTeam: {
+      name: "Cleveland Browns",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png"
+    },
+    channels: [{ name: "CBS Sports", embedUrl: "https://topembed.pw/channel/cbs", quality: "HD" }]
+  },
+  {
+    id: 'nfl_7',
+    title: "Dallas Cowboys vs Carolina Panthers",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Carolina Panthers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/car.png"
+    },
+    awayTeam: {
+      name: "Dallas Cowboys",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png"
+    },
+    channels: [{ name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }]
+  },
+  {
+    id: 'nfl_8',
+    title: "Seattle Seahawks vs Jacksonville Jaguars",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Jacksonville Jaguars",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png"
+    },
+    awayTeam: {
+      name: "Seattle Seahawks",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png"
+    },
+    channels: [{ name: "CBS Sports", embedUrl: "https://topembed.pw/channel/cbs", quality: "HD" }]
+  },
+  {
+    id: 'nfl_9',
+    title: "Los Angeles Chargers vs Baltimore Ravens",
+    time: "10:00 PM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-12T22:00:00-04:00"),
+    homeTeam: {
+      name: "Baltimore Ravens",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png"
+    },
+    awayTeam: {
+      name: "Los Angeles Chargers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png"
+    },
+    channels: [{ name: "CBS Sports", embedUrl: "https://topembed.pw/channel/cbs", quality: "HD" }]
+  },
+  {
+    id: 'nfl_10',
+    title: "Tennessee Titans vs Las Vegas Raiders",
+    time: "1:05 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-13T01:05:00-04:00"),
+    homeTeam: {
+      name: "Las Vegas Raiders",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png"
+    },
+    awayTeam: {
+      name: "Tennessee Titans",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png"
+    },
+    channels: [{ name: "NBC Sports", embedUrl: "https://topembed.pw/channel/nbc", quality: "HD" }]
+  },
+  {
+    id: 'nfl_11',
+    title: "Cincinnati Bengals vs Green Bay Packers",
+    time: "1:25 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-13T01:25:00-04:00"),
+    homeTeam: {
+      name: "Green Bay Packers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png"
+    },
+    awayTeam: {
+      name: "Cincinnati Bengals",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png"
+    },
+    channels: [{ name: "CBS Sports", embedUrl: "https://topembed.pw/channel/cbs", quality: "HD" }]
+  },
+  {
+    id: 'nfl_12',
+    title: "San Francisco 49ers vs Tampa Bay Buccaneers",
+    time: "1:25 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-13T01:25:00-04:00"),
+    homeTeam: {
+      name: "Tampa Bay Buccaneers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png"
+    },
+    awayTeam: {
+      name: "San Francisco 49ers",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png"
+    },
+    channels: [{ name: "FOX Sports", embedUrl: "https://topembed.pw/channel/fox", quality: "HD" }]
+  },
+  {
+    id: 'nfl_13',
+    title: "Detroit Lions vs Kansas City Chiefs",
+    time: "5:20 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-13T05:20:00-04:00"),
+    homeTeam: {
+      name: "Kansas City Chiefs",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png"
+    },
+    awayTeam: {
+      name: "Detroit Lions",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/det.png"
+    },
+    channels: [{ name: "NBC Sports", embedUrl: "https://topembed.pw/channel/nbc", quality: "HD" }]
+  },
+  {
+    id: 'nfl_14',
+    title: "Buffalo Bills vs Atlanta Falcons",
+    time: "4:15 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-14T04:15:00-04:00"),
+    homeTeam: {
+      name: "Atlanta Falcons",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png"
+    },
+    awayTeam: {
+      name: "Buffalo Bills",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png"
+    },
+    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }]
+  },
+  {
+    id: 'nfl_15',
+    title: "Chicago Bears vs Washington Commanders",
+    time: "5:15 AM",
+    league: "NFL",
+    status: "upcoming",
+    date: new Date("2025-10-14T05:15:00-04:00"),
+    homeTeam: {
+      name: "Washington Commanders",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png"
+    },
+    awayTeam: {
+      name: "Chicago Bears",
+      logo: "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png"
+    },
+    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }]
+  }
     ],
 
     nba: [
