@@ -398,7 +398,7 @@ const MANUAL_EVENTS = {
     ],
 
     mlb: [
-         {
+   {
     id: "mlb_1",
     title: "Seattle Mariners vs Detroit Tigers",
     time: "12:08 AM ET",
