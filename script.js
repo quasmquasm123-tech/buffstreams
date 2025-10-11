@@ -279,69 +279,121 @@ const MANUAL_EVENTS = {
     ],
 
     nba: [
-        {
-    id: 'nba_1',
-    title: "Oklahoma City Thunder vs Indiana Pacers",
-    time: "4:00 AM",
+       {
+    id: "nba_1",
+    title: "San Antonio Spurs vs Miami Heat",
+    time: "4:30 AM ET",
     league: "NBA",
-    date: new Date("2025-10-12T04:00:00-04:00"),
+    status: "upcoming",
+    date: new Date("2025-10-08T04:30:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
     homeTeam: {
-      name: "Indiana Pacers",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/ind.png"
+      name: "Miami Heat",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+      score: "0"
     },
     awayTeam: {
-      name: "Oklahoma City Thunder",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/okc.png"
+      name: "San Antonio Spurs",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
+      score: "0"
     },
-    channels: [{ name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "HD" }]
+    channels: [
+      { name: "BallySportsSun", embedUrl: "https://topembed.pw/channel/BallySportsSun[USA]", quality: "HD" },
+      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "720p" }
+    ]
   },
   {
-    id: 'nba_2',
-    title: "Atlanta Hawks vs Memphis Grizzlies",
-    time: "5:00 AM",
+    id: "nba_2",
+    title: "Utah Jazz vs Houston Rockets",
+    time: "5:00 AM ET",
     league: "NBA",
-    date: new Date("2025-10-12T05:00:00-04:00"),
+    status: "upcoming",
+    date: new Date("2025-10-08T05:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
+    homeTeam: {
+      name: "Houston Rockets",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+      score: "0"
+    },
+    awayTeam: {
+      name: "Utah Jazz",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+      score: "0"
+    },
+    channels: [
+      { name: "TNT", embedUrl: "https://topembed.pw/channel/tnt", quality: "HD" }
+    ]
+  },
+  {
+    id: "nba_3",
+    title: "Boston Celtics vs Memphis Grizzlies",
+    time: "5:00 AM ET",
+    league: "NBA",
+    status: "upcoming",
+    date: new Date("2025-10-08T05:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
     homeTeam: {
       name: "Memphis Grizzlies",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png"
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+      score: "0"
     },
     awayTeam: {
-      name: "Atlanta Hawks",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/atl.png"
+      name: "Boston Celtics",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
+      score: "0"
     },
-    channels: [{ name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "HD" }]
+    channels: [
+      { name: "ABC", embedUrl: "https://topembed.pw/channel/abc", quality: "HD" }
+    ]
   },
   {
-    id: 'nba_3',
-    title: "Charlotte Hornets vs Dallas Mavericks",
-    time: "5:30 AM",
+    id: "nba_4",
+    title: "Portland Trail Blazers vs Golden State Warriors",
+    time: "7:00 AM ET",
     league: "NBA",
-    date: new Date("2025-10-12T05:30:00-04:00"),
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
     homeTeam: {
-      name: "Dallas Mavericks",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/dal.png"
+      name: "Golden State Warriors",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+      score: "0"
     },
     awayTeam: {
-      name: "Charlotte Hornets",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/cha.png"
+      name: "Portland Trail Blazers",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+      score: "0"
     },
-    channels: [{ name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "HD" }]
+    channels: [
+      { name: "ESPN", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
+    ]
   },
   {
-    id: 'nba_4',
-    title: "Brooklyn Nets vs Phoenix Suns",
-    time: "4:00 PM",
+    id: "nba_5",
+    title: "Toronto Raptors vs Sacramento Kings",
+    time: "7:00 AM ET",
     league: "NBA",
-    date: new Date("2025-10-12T16:00:00-04:00"),
+    status: "upcoming",
+    date: new Date("2025-10-08T07:00:00-04:00"),
+    isLive: false,
+    isUpcoming: true,
     homeTeam: {
-      name: "Phoenix Suns",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/phx.png"
+      name: "Sacramento Kings",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+      score: "0"
     },
     awayTeam: {
-      name: "Brooklyn Nets",
-      logo: "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png"
+      name: "Toronto Raptors",
+      logo: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+      score: "0"
     },
-    channels: [{ name: "NBA TV", embedUrl: "https://topembed.pw/channel/NBATV[USA]", quality: "HD" }]
+    channels: [
+      { name: "NBA TV", embedUrl: "https://topembed.pw/channel/nbatv", quality: "HD" }
+    ]
   }
     ],
 
@@ -571,550 +623,29 @@ const MANUAL_EVENTS = {
     ],
 
     cfb: [
-          {
-    id: 'cfb_1',
-    title: "Ohio State vs Illinois",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Illinois",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ill.png"
-    },
-    awayTeam: {
-      name: "Ohio State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/osu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_2',
-    title: "Alabama vs Missouri",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Missouri",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/miz.png"
-    },
-    awayTeam: {
-      name: "Alabama",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ala.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_3',
-    title: "Pittsburgh vs Florida State",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Florida State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/fsu.png"
-    },
-    awayTeam: {
-      name: "Pittsburgh",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/pit.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_4',
-    title: "UCLA vs Michigan State",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Michigan State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/msu.png"
-    },
-    awayTeam: {
-      name: "UCLA",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ucl.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_5',
-    title: "Stanford vs SMU",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "SMU",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/smu.png"
-    },
-    awayTeam: {
-      name: "Stanford",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/stan.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_6',
-    title: "UCF vs Cincinnati",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Cincinnati",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/cin.png"
-    },
-    awayTeam: {
-      name: "UCF",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ucf.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_7',
-    title: "Houston vs Oklahoma State",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Oklahoma State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/okst.png"
-    },
-    awayTeam: {
-      name: "Houston",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/hou.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_8',
-    title: "Louisiana vs James Madison",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "James Madison",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/jmu.png"
-    },
-    awayTeam: {
-      name: "Louisiana",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/lalaf.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_9',
-    title: "Charlotte vs Army",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Army",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/army.png"
-    },
-    awayTeam: {
-      name: "Charlotte",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/char.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_10',
-    title: "Miami (OH) vs Akron",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Akron",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/akr.png"
-    },
-    awayTeam: {
-      name: "Miami (OH)",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/moh.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_11',
-    title: "Toledo vs Bowling Green",
-    time: "9:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:00:00-04:00"),
-    homeTeam: {
-      name: "Bowling Green",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/bgsu.png"
-    },
-    awayTeam: {
-      name: "Toledo",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/tol.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_12',
-    title: "Washington State vs Ole Miss",
-    time: "9:45 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T21:45:00-04:00"),
-    homeTeam: {
-      name: "Ole Miss",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/miss.png"
-    },
-    awayTeam: {
-      name: "Washington State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/wsu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_13',
-    title: "Northern Illinois vs Eastern Michigan",
-    time: "10:00 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T22:00:00-04:00"),
-    homeTeam: {
-      name: "Eastern Michigan",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/emu.png"
-    },
-    awayTeam: {
-      name: "Northern Illinois",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/niu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_14',
-    title: "Massachusetts vs Kent State",
-    time: "11:30 PM",
-    league: "CFB",
-    date: new Date("2025-10-12T23:30:00-04:00"),
-    homeTeam: {
-      name: "Kent State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/kent.png"
-    },
-    awayTeam: {
-      name: "Massachusetts",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/umass.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_15',
-    title: "Indiana vs Oregon",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Oregon",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ore.png"
-    },
-    awayTeam: {
-      name: "Indiana",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ind.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_16',
-    title: "Oklahoma vs Texas",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Texas",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/tex.png"
-    },
-    awayTeam: {
-      name: "Oklahoma",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/okla.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_17',
-    title: "Virginia Tech vs Georgia Tech",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Georgia Tech",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/gt.png"
-    },
-    awayTeam: {
-      name: "Virginia Tech",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/vt.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  }
-    {
-    id: 'cfb_18',
-    title: "NC State vs Notre Dame",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Notre Dame",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/nd.png"
-    },
-    awayTeam: {
-      name: "NC State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ncsu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_19',
-    title: "Iowa State vs Colorado",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Colorado",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/col.png"
-    },
-    awayTeam: {
-      name: "Iowa State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/isu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_20',
-    title: "Northwestern vs Penn State",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Penn State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/psu.png"
-    },
-    awayTeam: {
-      name: "Northwestern",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/nw.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_21',
-    title: "Nebraska vs Maryland",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Maryland",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/md.png"
-    },
-    awayTeam: {
-      name: "Nebraska",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/neb.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_22',
-    title: "Wake Forest vs Oregon State",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Oregon State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/orst.png"
-    },
-    awayTeam: {
-      name: "Wake Forest",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/wf.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_23',
-    title: "TCU vs Kansas State",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Kansas State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ksu.png"
-    },
-    awayTeam: {
-      name: "TCU",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/tcu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_24',
-    title: "Air Force vs UNLV",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "UNLV",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/unlv.png"
-    },
-    awayTeam: {
-      name: "Air Force",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/afa.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_25',
-    title: "App State vs Georgia State",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Georgia State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/gsu.png"
-    },
-    awayTeam: {
-      name: "App State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/app.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_26',
-    title: "Old Dominion vs Marshall",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Marshall",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/mar.png"
-    },
-    awayTeam: {
-      name: "Old Dominion",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/odu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_27',
-    title: "Ball State vs Western Michigan",
-    time: "12:30 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T00:30:00-04:00"),
-    homeTeam: {
-      name: "Western Michigan",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/wmu.png"
-    },
-    awayTeam: {
-      name: "Ball State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ball.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_28',
-    title: "Navy vs Temple",
-    time: "1:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T01:00:00-04:00"),
-    homeTeam: {
-      name: "Temple",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/temp.png"
-    },
-    awayTeam: {
-      name: "Navy",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/navy.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_29',
-    title: "Arkansas vs Tennessee",
-    time: "1:15 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T01:15:00-04:00"),
-    homeTeam: {
-      name: "Tennessee",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/tenn.png"
-    },
-    awayTeam: {
-      name: "Arkansas",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ark.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_30',
-    title: "UAB vs Florida Atlantic",
-    time: "3:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T03:00:00-04:00"),
-    homeTeam: {
-      name: "Florida Atlantic",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/fau.png"
-    },
-    awayTeam: {
-      name: "UAB",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/uab.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_31',
-    title: "Florida vs Texas A&M",
-    time: "4:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T04:00:00-04:00"),
-    homeTeam: {
-      name: "Texas A&M",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/tam.png"
-    },
-    awayTeam: {
-      name: "Florida",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/fla.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_32',
-    title: "Iowa vs Wisconsin",
-    time: "4:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T04:00:00-04:00"),
-    homeTeam: {
-      name: "Wisconsin",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/wis.png"
-    },
-    awayTeam: {
-      name: "Iowa",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/iowa.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_33',
-    title: "San José State vs Wyoming",
-    time: "4:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T04:00:00-04:00"),
-    homeTeam: {
-      name: "Wyoming",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/wyo.png"
-    },
-    awayTeam: {
-      name: "San José State",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/sjsu.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  },
-  {
-    id: 'cfb_34',
-    title: "UL Monroe vs Coastal Carolina",
-    time: "4:00 AM",
-    league: "CFB",
-    date: new Date("2025-10-13T04:00:00-04:00"),
-    homeTeam: {
-      name: "Coastal Carolina",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ccu.png"
-    },
-    awayTeam: {
-      name: "UL Monroe",
-      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ulm.png"
-    },
-    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
-  }
+        {
+            id: 'cfb_1',
+            title: "Alabama vs Georgia",
+            time: "8:00 PM",
+            league: "CFB",
+            status: "upcoming",
+            date: new Date(Date.now() + 48 * 60 * 60 * 1000),
+            isLive: false,
+            isUpcoming: true,
+            homeTeam: {
+                name: "Georgia Bulldogs",
+                logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+                score: "0"
+            },
+            awayTeam: {
+                name: "Alabama Crimson Tide",
+                logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+                score: "0"
+            },
+            channels: [
+                { name: "ESPN College", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
+            ]
+        }
     ],
 
     mma: [
