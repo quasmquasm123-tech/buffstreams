@@ -279,13 +279,13 @@ const MANUAL_EVENTS = {
     ],
 
     nba: [
-         {
+       {
     id: "nba_1",
     title: "Oklahoma City Thunder vs Indiana Pacers",
-    time: "4:00 AM ET",
+    time: "4:00 AM",
     league: "NBA",
     status: "upcoming",
-    date: new Date("2025-10-12T04:00:00-04:00"),
+    date: new Date("2025-10-12T04:00:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
@@ -305,10 +305,10 @@ const MANUAL_EVENTS = {
   {
     id: "nba_2",
     title: "Atlanta Hawks vs Memphis Grizzlies",
-    time: "5:00 AM ET",
+    time: "5:00 AM",
     league: "NBA",
     status: "upcoming",
-    date: new Date("2025-10-12T05:00:00-04:00"),
+    date: new Date("2025-10-12T05:00:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
@@ -328,10 +328,10 @@ const MANUAL_EVENTS = {
   {
     id: "nba_3",
     title: "Charlotte Hornets vs Dallas Mavericks",
-    time: "5:30 AM ET",
+    time: "5:30 AM",
     league: "NBA",
     status: "upcoming",
-    date: new Date("2025-10-12T05:30:00-04:00"),
+    date: new Date("2025-10-12T05:30:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
@@ -351,10 +351,10 @@ const MANUAL_EVENTS = {
   {
     id: "nba_4",
     title: "Brooklyn Nets vs Phoenix Suns",
-    time: "4:00 PM ET",
+    time: "4:00 PM",
     league: "NBA",
     status: "upcoming",
-    date: new Date("2025-10-12T16:00:00-04:00"),
+    date: new Date("2025-10-12T16:00:00"),
     isLive: false,
     isUpcoming: true,
     homeTeam: {
