@@ -623,29 +623,22 @@ const MANUAL_EVENTS = {
     ],
 
     cfb: [
-        {
-            id: 'cfb_1',
-            title: "Alabama vs Georgia",
-            time: "8:00 PM",
-            league: "CFB",
-            status: "upcoming",
-            date: new Date(Date.now() + 48 * 60 * 60 * 1000),
-            isLive: false,
-            isUpcoming: true,
-            homeTeam: {
-                name: "Georgia Bulldogs",
-                logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
-                score: "0"
-            },
-            awayTeam: {
-                name: "Alabama Crimson Tide",
-                logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
-                score: "0"
-            },
-            channels: [
-                { name: "ESPN College", embedUrl: "https://topembed.pw/channel/espn", quality: "HD" }
-            ]
-        }
+         {
+    id: 'cfb_34',
+    title: "UL Monroe vs Coastal Carolina",
+    time: "4:00 AM",
+    league: "CFB",
+    date: new Date("2025-10-13T04:00:00-04:00"),
+    homeTeam: {
+      name: "Coastal Carolina",
+      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ccu.png"
+    },
+    awayTeam: {
+      name: "UL Monroe",
+      logo: "https://a.espncdn.com/i/teamlogos/ncaa/500/ulm.png"
+    },
+    channels: [{ name: "ESPN", embedUrl: "https://topembed.pw/channel/ESPN[USA]", quality: "HD" }]
+  }
     ],
 
     mma: [
